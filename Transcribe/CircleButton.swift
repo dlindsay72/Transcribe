@@ -14,9 +14,17 @@ class CircleButton: UIButton {
 
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
-            layer.cornerRadius = cornerRadius
+            setupView()
         }
         
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setupView()
+    }
+    
+    func setupView() {
+        layer.cornerRadius = cornerRadius
     }
 
 }
