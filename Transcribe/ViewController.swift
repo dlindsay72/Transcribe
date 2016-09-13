@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import Speech
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
+    @IBOutlet weak var transcriptionTextField: UITextView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        activitySpinner.isHidden = true
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

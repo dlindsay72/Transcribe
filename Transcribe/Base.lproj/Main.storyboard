@@ -67,15 +67,23 @@
                                 <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qec-aq-HWP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Wf2-7n-I3d"/>
+                                    <constraint firstAttribute="width" constant="90" id="meD-zo-2hS"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rtA-5o-Y0Z" secondAttribute="bottom" constant="83" id="2Fk-Z1-kZO"/>
+                            <constraint firstItem="Qec-aq-HWP" firstAttribute="centerY" secondItem="rtA-5o-Y0Z" secondAttribute="centerY" id="Bgj-2a-ShC"/>
                             <constraint firstAttribute="trailing" secondItem="Jtv-YP-YMb" secondAttribute="trailing" constant="20" id="MoU-Ks-Xzm"/>
                             <constraint firstItem="LZg-33-irI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nge-cM-98x"/>
                             <constraint firstAttribute="trailing" secondItem="LZg-33-irI" secondAttribute="trailing" id="OMX-eg-n54"/>
                             <constraint firstItem="Jtv-YP-YMb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Qoo-pN-pHp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SN3-Qh-gft" secondAttribute="bottom" constant="20" id="g9d-Kp-s5n"/>
+                            <constraint firstItem="Qec-aq-HWP" firstAttribute="centerX" secondItem="rtA-5o-Y0Z" secondAttribute="centerX" id="gJo-gU-R0L"/>
                             <constraint firstItem="Jtv-YP-YMb" firstAttribute="top" secondItem="LZg-33-irI" secondAttribute="bottom" constant="20" id="njX-J4-Xve"/>
                             <constraint firstItem="SN3-Qh-gft" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q3n-b0-bIM"/>
                             <constraint firstItem="rtA-5o-Y0Z" firstAttribute="top" secondItem="Jtv-YP-YMb" secondAttribute="bottom" constant="20" id="xjs-rY-kmc"/>
@@ -83,6 +91,10 @@
                             <constraint firstItem="rtA-5o-Y0Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJU-10-2Es"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="Qec-aq-HWP" id="sjE-r1-mGJ"/>
+                        <outlet property="transcriptionTextField" destination="Jtv-YP-YMb" id="R1j-Sm-Svs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
