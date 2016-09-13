@@ -1,26 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Transcribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-33-irI">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVs-Kz-Dwj">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="cYW-sm-hJu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="27"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.71188129194630867" green="0.40111815703355708" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="Yfk-12-hg8"/>
+                                    <constraint firstItem="SVs-Kz-Dwj" firstAttribute="centerX" secondItem="LZg-33-irI" secondAttribute="centerX" id="cIk-nR-ZK2"/>
+                                    <constraint firstItem="SVs-Kz-Dwj" firstAttribute="centerY" secondItem="LZg-33-irI" secondAttribute="centerY" id="uO5-ts-9LV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtA-5o-Y0Z" customClass="CircleButton" customModule="Transcribe" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.40000000000000002" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Iyx-br-y2e"/>
+                                    <constraint firstAttribute="width" constant="90" id="SBz-44-KG9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.70980392156862748" green="0.40000000000000002" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-Qh-gft">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="3ZU-tE-tsl"/>
+                                    <constraint firstAttribute="height" constant="36" id="z4W-gD-3Jb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to transcribe the audio embedded in this app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jtv-YP-YMb">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rtA-5o-Y0Z" secondAttribute="bottom" constant="83" id="2Fk-Z1-kZO"/>
+                            <constraint firstAttribute="trailing" secondItem="Jtv-YP-YMb" secondAttribute="trailing" constant="20" id="MoU-Ks-Xzm"/>
+                            <constraint firstItem="LZg-33-irI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nge-cM-98x"/>
+                            <constraint firstAttribute="trailing" secondItem="LZg-33-irI" secondAttribute="trailing" id="OMX-eg-n54"/>
+                            <constraint firstItem="Jtv-YP-YMb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Qoo-pN-pHp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SN3-Qh-gft" secondAttribute="bottom" constant="20" id="g9d-Kp-s5n"/>
+                            <constraint firstItem="Jtv-YP-YMb" firstAttribute="top" secondItem="LZg-33-irI" secondAttribute="bottom" constant="20" id="njX-J4-Xve"/>
+                            <constraint firstItem="SN3-Qh-gft" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q3n-b0-bIM"/>
+                            <constraint firstItem="rtA-5o-Y0Z" firstAttribute="top" secondItem="Jtv-YP-YMb" secondAttribute="bottom" constant="20" id="xjs-rY-kmc"/>
+                            <constraint firstItem="LZg-33-irI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zAx-bV-Pqn"/>
+                            <constraint firstItem="rtA-5o-Y0Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJU-10-2Es"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-32.8125" y="27.5390625"/>
         </scene>
     </scenes>
 </document>
